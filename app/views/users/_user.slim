@@ -1,0 +1,12 @@
+section.author
+  .photo = user.photo
+  .about
+    header
+      h2 = "About #{user.first_name}"
+    p = user.bio
+    aside.more
+      ' Read more from
+      a = link_to user.first_name, author_path(user)
+      - if user.has_twitter?
+        '  or follow him on
+        a = link_to 'Twitter', user.twitter_url

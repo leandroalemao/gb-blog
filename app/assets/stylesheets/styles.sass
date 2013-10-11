@@ -17,6 +17,10 @@ ul, ol
   padding-left: 1em
   margin-bottom: 10px
 
+p
+  +base-font($size: 1em, $line-height: 1.4em, $color: #333)
+  padding-top: 10px
+
 textarea
   +box-sizing(border-box)
   background-color: $light-gray
@@ -198,3 +202,12 @@ aside
     background-color: $gb-color
     padding: $nav-padding
     margin-bottom: 0
+    padding: 40px 0
+
+#footer-nav
+  padding: 40px 0
+  border-top: solid 1px #eee
+  h3
+    +letterpress
+    +base-font($size: 1.5em, $color: #999, $weight: bold)
+    padding-bottom: 30px

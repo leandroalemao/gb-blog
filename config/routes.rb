@@ -2,7 +2,9 @@ GbBlog::Application.routes.draw do
 
   root to: "posts#index"
 
-  resources :users, controller: :users, only: [:create]
+  resources :users, only: [:create, :show]
+
+  get 'author/:author', to: 'users#show', as: :author
   get 'category/:category', to: 'posts#index', as: :category
   resources :posts, only: [:show]
 

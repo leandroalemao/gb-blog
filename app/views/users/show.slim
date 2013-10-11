@@ -1,0 +1,7 @@
+- present(@user) do |user|
+  article.author-page
+    = render 'user', user: user
+
+    ul
+      - user.posts.each do |post|
+        li = link_to post.title, post_path(post)

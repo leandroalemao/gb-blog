@@ -31,7 +31,7 @@ class PostPresenter < RailsPresenter::Base
   end
 
   def author_link
-    h.link_to author.first_name, '#'
+    h.link_to author.first_name, h.author_path(author)
   end
 
   def author_photo
